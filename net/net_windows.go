@@ -396,7 +396,7 @@ func getTableInfo(filename string, table interface{}) (index, step, length int) 
 	return
 }
 
-func getTCPConnections(family uint32) ([]ConnectionStat, error) {
+func GetTCPConnections(family uint32) ([]ConnectionStat, error) {
 	var (
 		p    uintptr
 		buf  []byte
@@ -477,7 +477,7 @@ func getTCPConnections(family uint32) ([]ConnectionStat, error) {
 	return stats, nil
 }
 
-func getUDPConnections(family uint32) ([]ConnectionStat, error) {
+func GetUDPConnections(family uint32) ([]ConnectionStat, error) {
 	var (
 		p    uintptr
 		buf  []byte
